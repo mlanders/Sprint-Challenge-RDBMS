@@ -115,6 +115,7 @@ server.post('/api/actions', async (req, res) => {
 		if (action) {
 			res.status(200).json({
 				message: 'Action was created.',
+				action,
 			});
 		} else {
 			res.status(404).json({ message: 'Unable to add the action.' });
