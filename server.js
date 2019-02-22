@@ -58,7 +58,7 @@ server.post('/api/projects', async (req, res) => {
 		if (project) {
 			res.status(200).json({ message: 'Project created successfully.', project });
 		} else {
-			res.status(404).json({ message: 'The project could not be created.' });
+			res.status(404).json({ message: 'Project could not be created.' });
 		}
 	} catch (error) {
 		res.status(500).json({
@@ -81,10 +81,10 @@ server.delete('/api/projects/:id', async (req, res) => {
 				message: 'Project was deleted successfully.',
 			});
 		} else {
-			res.status(404).json({ message: 'The project could not be found.' });
+			res.status(404).json({ message: 'Project could not be found.' });
 		}
 	} catch (error) {
-		res.status(500).json({ message: 'There was an error deleting the project.', error });
+		res.status(500).json({ message: 'Error when deleting the project.', error });
 	}
 });
 
